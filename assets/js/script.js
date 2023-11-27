@@ -90,6 +90,40 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+    var upperCaseChoice = getUpperCasedOption();
+  var lowerCaseChoice = getLowerCasedOption();
+  var specialCharacterChoice = getSpecialCharacterOption();
+  var numericCharacterChoice = getNumericCharacterOption();
+
+  var combinedCharactersArr = [];
+  
+
+    if (!upperCaseChoice && !lowerCaseChoice && !specialCharacterChoice && !numericCharacterChoice)
+  {
+    alert("You must choose at least one character set. Please try again later.");
+    combinedCharactersArr = [];
+    return;
+  } else
+  {
+
+      if (upperCaseChoice == true) {
+        combinedCharactersArr = combinedCharactersArr.concat(upperCasedCharacters);
+      }
+
+      if (lowerCaseChoice == true)
+      {
+        combinedCharactersArr = combinedCharactersArr.concat(lowerCasedCharacters);
+      }
+
+      if (specialCharacterChoice  == true) {
+        combinedCharactersArr = combinedCharactersArr.concat(specialCharacters);
+      }
+
+      if(numericCharacterChoice == true) {
+        combinedCharactersArr = combinedCharactersArr.concat(numericCharacters);
+      }
+  }
+  return combinedCharactersArr;
 
 }
 
