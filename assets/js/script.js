@@ -183,12 +183,12 @@ function getPasswordLength() {
 }
 
 function getUpperCasedOption() {
-  var upperCasedOption = confirm("Would you like to include upper case letters?")
+  var upperCasedOption = confirm("Would you like to include uppercase letters?")
   return upperCasedOption;
   }
 
   function getLowerCasedOption() {
-  var lowerCasedOption = confirm("Would you like to include lower case letters?")
+  var lowerCasedOption = confirm("Would you like to include lowercase letters?")
   return lowerCasedOption;
   }
 
