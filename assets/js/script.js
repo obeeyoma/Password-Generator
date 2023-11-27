@@ -116,3 +116,29 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+// Function declarations to get password options
+function getPasswordLength() {
+  var passwordLengthOption = prompt("How many characters would you like your password to have? Choose between 8 to 128 characters.");
+  return passwordLengthOption;
+}
+
+function getUpperCasedOption() {
+  var upperCasedOption = confirm("Would you like to include upper case letters?")
+  return upperCasedOption;
+  }
+
+  function getLowerCasedOption() {
+  var lowerCasedOption = confirm("Would you like to include lower case letters?")
+  return lowerCasedOption;
+  }
+
+function getSpecialCharacterOption() {
+  var specialCharacterOption = confirm("Would you like to include special characters?")
+  return specialCharacterOption;
+  }
+
+  function getNumericCharacterOption() {
+  var numericCharacterOption = confirm("Would you like to include numbers?")
+  return numericCharacterOption;
+}
