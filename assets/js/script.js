@@ -136,7 +136,30 @@ var selectedCharcters = "";
 
 // Function to generate password with user input
 function generatePassword() {
+  var text = "";
 
+  //Getting input from the user
+
+  // Get length of password
+  var passwordLength = getPasswordLength();
+
+  // Validate user input 
+   //Password length must be numeric and between value 8 to 128
+  if (isNaN(passwordLength)){
+    alert("Password length must be a number. Please try again.");
+    return;
+  } else if (passwordLength < 8 || passwordLength > 128) {
+    alert("Password length should be between 8 to 128 characters. Please try again.");
+  return;
+  };
+
+// Get user character set choices
+var passwordCharactersArr = getPasswordOptions();
+
+//Build the password
+  for (var i = 0; i < passwordLength; i++)
+    text += getRandom(passwordCharactersArr);
+  return text;
 }
 
 // Get references to the #generate element
