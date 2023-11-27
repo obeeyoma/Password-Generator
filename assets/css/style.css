@@ -23,6 +23,7 @@ body {
   padding-right: 20px;
 }
 
+/* Header styles */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +31,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Card styles */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -72,6 +74,7 @@ header {
   clear: both;
 }
 
+/* Password button styles */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -117,6 +120,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Responsive styles */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;

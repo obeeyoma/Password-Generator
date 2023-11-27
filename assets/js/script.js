@@ -90,14 +90,15 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-    var upperCaseChoice = getUpperCasedOption();
+
+  var upperCaseChoice = getUpperCasedOption();
   var lowerCaseChoice = getLowerCasedOption();
   var specialCharacterChoice = getSpecialCharacterOption();
   var numericCharacterChoice = getNumericCharacterOption();
 
   var combinedCharactersArr = [];
   
-
+// Validate user input on options
     if (!upperCaseChoice && !lowerCaseChoice && !specialCharacterChoice && !numericCharacterChoice)
   {
     alert("You must choose at least one character set. Please try again later.");
@@ -153,7 +154,7 @@ function generatePassword() {
   return;
   };
 
-// Get user character set choices
+// Get all user character set choices
 var passwordCharactersArr = getPasswordOptions();
 
 //Build the password
@@ -176,27 +177,31 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-// Function declarations to get password options
+// Function declarations to get user input for password options
+
+// Function to get length of password
 function getPasswordLength() {
   var passwordLengthOption = prompt("How many characters would you like your password to have? Choose between 8 to 128 characters.");
   return passwordLengthOption;
 }
 
+// Function to get uppercase option
 function getUpperCasedOption() {
   var upperCasedOption = confirm("Would you like to include uppercase letters?")
   return upperCasedOption;
-  }
-
+}
+  
+// Function to get lowercase option
   function getLowerCasedOption() {
   var lowerCasedOption = confirm("Would you like to include lowercase letters?")
   return lowerCasedOption;
   }
-
+// Function to get special character option
 function getSpecialCharacterOption() {
   var specialCharacterOption = confirm("Would you like to include special characters?")
   return specialCharacterOption;
   }
-
+// Function to get numeric character option
   function getNumericCharacterOption() {
   var numericCharacterOption = confirm("Would you like to include numbers?")
   return numericCharacterOption;
