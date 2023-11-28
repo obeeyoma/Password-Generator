@@ -100,9 +100,11 @@ function getPasswordOptions() {
   
 // Validate user input on options
     if (!upperCaseChoice && !lowerCaseChoice && !specialCharacterChoice && !numericCharacterChoice)
-  {
-    alert("You must choose at least one character set. Please try again.");
-    return " ";
+    {
+      alert("You must choose at least one character set. Please try again.");
+      location.reload();
+      return;
+
   } else
   {
 
@@ -146,11 +148,11 @@ function generatePassword() {
   // Validate user input 
    //Password length must be numeric and between value 8 to 128
   if (isNaN(passwordLength)){
-    alert("Password length must be a number. Please try again.");
-    return;
+    text = "Password length must be a number. Please try again."
+    return text;
   } else if (passwordLength < 8 || passwordLength > 128) {
-    alert("Password length should be a number between 8 to 128. Please try again.");
-  return;
+    text = "Password length should be a number between 8 to 128. Please try again."
+  return text;
   };
 
 // Get all user character set choices
@@ -180,7 +182,7 @@ generateBtn.addEventListener('click', writePassword);
 
 // Function to get length of password
 function getPasswordLength() {
-  var passwordLengthOption = prompt("How many characters would you like your password to have? Choose between 8 to 128 characters.");
+  var passwordLengthOption = prompt("How many characters would you like your password to have? Choose between 8 to 128.");
   return passwordLengthOption;
 }
 
