@@ -101,9 +101,8 @@ function getPasswordOptions() {
 // Validate user input on options
     if (!upperCaseChoice && !lowerCaseChoice && !specialCharacterChoice && !numericCharacterChoice)
   {
-    alert("You must choose at least one character set. Please try again later.");
-    combinedCharactersArr = [];
-    return;
+    alert("You must choose at least one character set. Please try again.");
+    return " ";
   } else
   {
 
@@ -150,7 +149,7 @@ function generatePassword() {
     alert("Password length must be a number. Please try again.");
     return;
   } else if (passwordLength < 8 || passwordLength > 128) {
-    alert("Password length should be between 8 to 128 characters. Please try again.");
+    alert("Password length should be a number between 8 to 128. Please try again.");
   return;
   };
 
@@ -177,7 +176,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-// Function declarations to get user input for password options
+// Functions to get user input for password options
 
 // Function to get length of password
 function getPasswordLength() {
